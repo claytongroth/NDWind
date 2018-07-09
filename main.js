@@ -6,7 +6,7 @@ ND.features.sort(function(a, b) {
 // Declaring the map variable and each of the Tilesets therein as variables to use in the layerControl later
 var mymap = L.map('mapid', {
             minZoom: 6,
-            maxZoom: 16,
+            maxZoom: 13,
             attributionControl: false
             }, 
     ).setView([47.650589, -100.437012], 7);
