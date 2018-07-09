@@ -81,7 +81,7 @@ var layerControl = L.control.layers(baseLayers, windLayers, {position: 'topleft'
 layerControl.addTo(mymap);  
     
 // add the wind/Grib data to the map. Eventually I want this to be live data, but for the scope of this assignment I did not have time to host my own server to launch the grib/json conversion
- $.getJSON('demo.json', function (data) {
+ $.getJSON('/NDWind/demo.json', function (data) {
 
 	var velocityLayer = L.velocityLayer({
 		displayValues: true,
@@ -105,7 +105,7 @@ layerControl.addTo(mymap);
 
 // Unused icon. Planned to integrate in marker clusters to improve visual cleaness as well as performance
 var myIconDot = L.icon({
-  iconUrl: '/img/dot.png',
+  iconUrl: '/NDWind/img/dot.png',
   iconSize: [32, 32],
   iconAnchor: [16, 37],
   popupAnchor: [0, -28]
@@ -120,7 +120,7 @@ geojson = L.geoJson(ND, {
     pointToLayer: function (feature, latlng) {
         if (feature.properties.ABOVEGROUNDLEVELHEIGHT < 290)
             return L.marker(latlng, {icon: L.icon({
-                                    iconUrl: '/img/WTurbine.png',
+                                    iconUrl: '/NDWind/img/WTurbine.png',
                                     iconSize: [20, 20],   // 20, 22.5
                                     iconAnchor: [10, 20],
                                     popupAnchor: [0, -28]
@@ -128,7 +128,7 @@ geojson = L.geoJson(ND, {
         });   
         if (feature.properties.ABOVEGROUNDLEVELHEIGHT == 290)
             return L.marker(latlng, {icon: L.icon({
-                                    iconUrl: '/img/WTurbine.png',
+                                    iconUrl: '/NDWind/img/WTurbine.png',
                                     iconSize: [30, 30],   // 31.5, 35.25
                                     iconAnchor: [15, 30],
                                     popupAnchor: [0, -28]
@@ -136,7 +136,7 @@ geojson = L.geoJson(ND, {
         }); 
         if (feature.properties.ABOVEGROUNDLEVELHEIGHT > 290 && feature.properties.ABOVEGROUNDLEVELHEIGHT < 389)
             return L.marker(latlng, {icon: L.icon({
-                                    iconUrl: '/img/WTurbine.png',
+                                    iconUrl: '/NDWind/img/WTurbine.png',
                                     iconSize: [40, 40],   // 42, 47
                                     iconAnchor: [20, 40],
                                     popupAnchor: [0, -28]
@@ -144,7 +144,7 @@ geojson = L.geoJson(ND, {
         });
         if (feature.properties.ABOVEGROUNDLEVELHEIGHT > 389 && feature.properties.ABOVEGROUNDLEVELHEIGHT < 426)
             return L.marker(latlng, {icon: L.icon({
-                                    iconUrl: '/img/WTurbine.png',
+                                    iconUrl: '/NDWind/img/WTurbine.png',
                                     iconSize: [60, 60],   // 44, 49
                                     iconAnchor: [30, 60],
                                     popupAnchor: [0, -28]
@@ -152,7 +152,7 @@ geojson = L.geoJson(ND, {
         });
         if (feature.properties.ABOVEGROUNDLEVELHEIGHT > 426 && feature.properties.ABOVEGROUNDLEVELHEIGHT < 500)
             return L.marker(latlng, {icon: L.icon({
-                                    iconUrl: '/img/WTurbine.png',
+                                    iconUrl: '/NDWind/img/WTurbine.png',
                                     iconSize: [70, 70],   // 46, 52
                                     iconAnchor: [35, 70],
                                     popupAnchor: [0, -28]
