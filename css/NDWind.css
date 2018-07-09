@@ -16,7 +16,7 @@
 @font-face {
 font-family: storm;
 src: 
-url("css/fonts/storm.ttf");
+url("/NDWind/css/fonts/storm.ttf");
 } 
 #mapid { 
     height: 550px;
@@ -55,7 +55,7 @@ body {
     margin: 0;
     font-family: 'Montserrat', sans-serif;
     background-color: hsl(138, 54%, 42%, .3);
-    background-image: url(/img/topography.svg);
+    background-image: url(/NDWind/img/topography.svg);
     background-blend-mode: soft-light;
     font-size: 1em;
     padding-bottom:60px;
@@ -166,7 +166,7 @@ height: 14px;
     font-size: 18px;
 }
 .icon {
-    background: url('/img/layers.svg');
+    background: url('/NDWind/img/layers.svg');
     background-position: center center;
     display: inline-block;
     background-color: hsl(138, 54%, 42%, .5);
@@ -175,7 +175,7 @@ height: 14px;
     border-radius: 50%;
 }
 .slidericon {
-    background: url('/img/slider.PNG'); 
+    background: url('/NDWind/img/slider.PNG'); 
     background-size:cover;
     display: inline-block;
     border-radius: 10%;
@@ -183,7 +183,7 @@ height: 14px;
     height: 29.5px;
 }
 .turbineicon {
-    background: url('/img/WTurbine.png'); 
+    background: url('/NDWind/img/WTurbine.png'); 
     background-size:cover;
     display: inline-block;
     border-radius: 10%;
